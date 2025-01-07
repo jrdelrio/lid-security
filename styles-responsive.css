@@ -1,0 +1,409 @@
+:root {
+    --color-blue: #005BEB;
+    --color-gray-1: #eaeaea;
+}
+
+/* responsive design */
+/* mobile */
+@media (width <=767px) {
+
+    body {
+        margin: 0;
+    }
+
+    .contact-above {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+        background-color: var(--color-blue);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: var(--color-white);
+    }
+
+    .contact-above * {
+        color: var(--color-white) !important;
+        text-decoration: none;
+    }
+
+    .contact-above>*:last-child {
+        margin-right: 20px;
+    }
+
+    .icons {
+        gap: 0;
+        margin-left: 20px;
+    }
+
+    .icons a {
+        margin-left: 10px;
+    }
+
+    li.nav-item a.nav-link {
+        font-family: 'krona-one-regular';
+        font-size: 18px;
+    }
+
+    .header-section h1 {
+        font-size: 25px;
+    }
+
+    .header-section>h3 {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .header-section img.guards-image {
+        width: 90%;
+    }
+
+    .goals-container {
+        width: 100%;
+    }
+
+    .goals-container .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Configura dos columnas de igual tamaño */
+        grid-template-rows: 1fr 1fr;
+        /* Configura dos filas de igual tamaño */
+        gap: 20px;
+        /* Espacio entre los elementos en la cuadrícula */
+        padding: 20px;
+        /* Espacio alrededor de la cuadrícula dentro del contenedor */
+        box-sizing: border-box;
+        /* Asegura que el padding se incluya dentro del tamaño total */
+    }
+
+    .goals-container .grid-container article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .goals-container .grid-container article h3 {
+        font-size: 35px;
+    }
+
+    .goals-container .grid-container article p {
+        font-size: 10px;
+    }
+
+    /* services section */
+
+    .solutions-section>.content-container {
+        margin: 0;
+        padding-top: 190px;
+        text-align: center;
+    }
+
+    .solutions-section .content-container {
+        width: 100%;
+        background-image: url('./img/bg-elipse-blur.png');
+        background-position: right;
+    }
+
+    .solutions-section h2 {
+        font-size: 18px;
+        margin: 0 25px 20px 25px;
+        text-wrap: auto;
+    }
+
+    .solutions-grid {
+        justify-items: center;
+        display: block;
+    }
+
+    /* solutions cards */
+    .solution-card {
+        text-align: center;
+        font-family: krona-one-regular;
+        font-size: 14px;
+        width: 75%;
+        margin-bottom: 50px;
+    }
+
+    .solution-card img.solution-icon {
+        width: 110px;
+    }
+
+    .solution-card h4 {
+        font-size: 14px;
+        width: 70%;
+        justify-self: center;
+        margin-top: 20px;
+    }
+
+    .solution-card p {
+        font-size: 12px;
+        font-family: poppins;
+    }
+
+    .central-img-content {
+        margin-left: 0;
+    }
+
+    .central-img {
+        display: block;
+        width: 90%;
+        justify-self: center;
+        text-align: left;
+    }
+
+    .central-img img {
+        width: 100%;
+        align-self: center;
+    }
+
+    .central-img h4 {
+        font-size: 14px;
+        font-family: krona-one-regular;
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .central-img p {
+        font-size: 12px;
+        font-family: poppins;
+    }
+
+    .central-img a {
+        font-size: 14px;
+        text-decoration: none;
+        font-family: krona-one-regular;
+    }
+
+    .herramientas-section {
+        background-color: var(--color-gray-1);
+        border-radius: 10px;
+        padding-bottom: 20px;
+    }
+
+    .herramientas-section-header {
+        padding: 0;
+        display: block;
+    }
+
+    .herramientas-section h2 {
+        font-size: 14px;
+        margin: 0 25px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        width: 65%;
+    }
+
+    .herramientas-section a {
+        margin-left: 25px;
+        margin-bottom: 50px;
+    }
+
+    .tools-grid {
+        display: block;
+        width: 100%;
+    }
+
+    .tool-card {
+        background-color: var(--color-white);
+        border-radius: 25px;
+        width: 90%;
+        justify-self: center;
+        /* max-width: 360px; */
+        margin-bottom: 30px;
+    }
+
+    .herramientas-section .tool-card:first-of-type {
+        margin-top: 60px;
+    }
+
+    .herramientas-section .tool-card:last-of-type {
+        margin-bottom: 40px;
+    }
+
+    .tool-card-content {
+        padding: 30px;
+        font-family: krona-one-regular;
+        padding-bottom: 20px;
+    }
+
+    .tool-card-content h5 {
+        font-size: 10px;
+        margin-top: 30px;
+        text-transform: uppercase;
+    }
+
+    .tool-card-content h4 {
+        font-size: 14px;
+    }
+
+    .tool-card-content p {
+        font-size: 12px;
+    }
+
+    .tool-card img {
+        width: 85px;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .tool-card a {
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    /* fortalezas section */
+    .fortalezas-section h2 {
+        font-size: 20px;
+        margin-top: 40px;
+        text-wrap: pretty;
+    }
+
+    .fortalezas-section .fortalezas-container {
+        display: block;
+        width: 100%;
+        text-align: -webkit-center;
+    }
+
+    .fortalezas-container article {
+        width: 100%;
+        max-width: 450px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .fortalezas-container article:last-of-type {
+        margin-bottom: 40px;
+    }
+
+    .fortalezas-container article h4 {
+        font-size: 16px;
+    }
+
+    .fortalezas-container article p {
+        font-size: 16px;
+    }
+
+    .fortalezas-images,
+    .fortalezas-images img {
+        display: block;
+        justify-items: center;
+        width: 70%;
+    }
+
+
+    /* about us */
+    .about-us-section .content-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .about-us-section .content-wrapper .title-button {
+        display: block;
+    }
+
+    .about-us-section .content-wrapper .title-button h3 {
+        font-size: 20px;
+    }
+
+    .about-us-section .content-wrapper .title-button p {
+        font-size: 16px;
+    }
+
+    .contact-navbar-button-about-section {
+        display: table;
+    }
+
+
+    .section-contact {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .section-contact .columns-2 {
+        display: block;
+    }
+
+    .columns-2 .text-container.left {
+        width: 95%;
+    }
+
+    .section-contact .columns-2 .form-container.right {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0;
+    }
+
+    .text-container.left p:last-child {
+        margin-bottom: 50px;
+    }
+
+    .section-contact .columns-2 .form-container.right form {
+        text-align: center;
+    }
+
+    .section-contact .columns-2 .form-container.right form button {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+
+    /* footer */
+    footer {
+        background-color: var(--color-black);
+        width: 100vw;
+        color: var(--color-gray-2);
+        border-radius: 25px 25px 0 0;
+    }
+
+    footer .footer-wrapper {
+        display: block;
+    }
+
+    .navbar-footer ul {
+        display: block;
+    }
+
+    footer .logo-footer img {
+        margin: 20px;
+    }
+
+    .navbar-footer ul {
+        list-style-type: none;
+        font-family: krona-one-regular;
+    }
+
+    .navbar-footer ul li {
+        margin-bottom: 12px;
+    }
+
+    .navbar-footer ul li a {
+        text-decoration: none;
+        color: var(--color-gray-2);
+    }
+
+    .footer-contacto {
+        text-align: right;
+        padding-right: 30px;
+        margin-bottom: 35px;
+        float: none;
+    }
+
+    .footer-contacto a {
+        display: block;
+        color: var(--color-gray-2);
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+
+    footer .copywrite {
+        padding-left: 15px;
+        padding-bottom: 10px;
+    }
+
+}

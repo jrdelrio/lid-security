@@ -1,0 +1,11 @@
+
+/* main title */
+.animate__animated.animate__bounce {
+    --animate-duration: 1.5s;
+}
+
+/* main image guards */
+.animate__animated.animate__bounceInRight {
+    --animate-duration: 1.5s;
+}
+

@@ -5,7 +5,8 @@
 
 /* responsive design */
 /* mobile */
-@media (width <=767px) {
+@media (max-width: 767px) {
+
 
     body {
         margin: 0;

@@ -41,15 +41,15 @@ function buttonToBeforeEndAboutSection() {
 
 // Función para cambiar entre el footer móvil y el de escritorio
 function toggleFooter() {
-    const mobileFooter = document.querySelector(".mobile-footer");
-    const desktopFooter = document.querySelector(".desktop-footer");
+    // const mobileFooter = document.querySelector(".mobile-footer");
+    // const desktopFooter = document.querySelector(".desktop-footer");
 
-    // Detectar el ancho de la ventana
-    if (window.innerWidth < 767) {
-        desktopFooter.style.display = "none";
-    } else {
-        mobileFooter.style.display = "none";
-    }
+    // // Detectar el ancho de la ventana
+    // if (window.innerWidth < 767) {
+    //     desktopFooter.style.display = "none";
+    // } else {
+    //     mobileFooter.style.display = "none";
+    // }
 }
 
 // Ejecutar la función al cargar la página

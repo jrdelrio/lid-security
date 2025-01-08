@@ -5,7 +5,7 @@
 
 /* responsive design */
 /* mobile */
-@media (max-width: 767px) {
+@media (width <= 767px) {
 
 
     body {
@@ -32,9 +32,9 @@
         margin-right: 20px;
     }
 
-    .icons {
+    .contact-above .icons {
+        display: flex;
         gap: 0;
-        margin-left: 20px;
     }
 
     .icons a {

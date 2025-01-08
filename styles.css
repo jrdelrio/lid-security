@@ -603,7 +603,7 @@ button.view-more {
     box-sizing: border-box;
 }
 
-/* footer
+footer
 footer {
     background-color: var(--color-black);
     width: 100vw;
@@ -727,7 +727,7 @@ footer.desktop-footer .logo-navbar {
     display: block;
     color: var(--color-gray-2);
     text-decoration: none;
-} */
+}
 
 @media (width > 767px) {
     .menu-icon {

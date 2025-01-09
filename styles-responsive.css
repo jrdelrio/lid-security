@@ -1,15 +1,30 @@
 :root {
+    --color-white: #ffffff;
+    --color-black: #1a1a1a;
     --color-blue: #005BEB;
+    --color-red: #E85F5C;
+    --color-green: #00b11b;
     --color-gray-1: #eaeaea;
+    --color-gray-2: #cccccc;
+    --color-gray-3: #a0a0a0;
+    --color-gray-4: #818181;
+    --color-gray-5: #707070;
+
+    --w-min-desktop: 1025px;
+    --w-max-tablet: 1024px;
+    --w-min-tablet: 768px;
+    --w-max-mobile: 767px;
 }
 
 /* responsive design */
 /* mobile */
 @media (width <= 767px) {
 
-
+    html,
     body {
         margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     .contact-above {
@@ -29,7 +44,7 @@
     }
 
     .contact-above>*:last-child {
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .contact-above .icons {
@@ -267,7 +282,7 @@
     .fortalezas-section .fortalezas-container {
         display: block;
         width: 100%;
-        text-align: -webkit-center;
+        justify-items: center;
     }
 
     .fortalezas-container article {
@@ -297,11 +312,15 @@
         width: 70%;
     }
 
-
     /* about us */
     .about-us-section .content-wrapper {
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 60px;
+    }
+
+    .about-us-section .content-wrapper p {
+        font-size: 18px;
     }
 
     .about-us-section .content-wrapper .title-button {
@@ -310,6 +329,7 @@
 
     .about-us-section .content-wrapper .title-button h3 {
         font-size: 20px;
+        margin-bottom: 35px;
     }
 
     .about-us-section .content-wrapper .title-button p {
@@ -406,5 +426,43 @@
         padding-left: 15px;
         padding-bottom: 10px;
     }
+
+    /* modal */
+
+    .modal-content {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    h4.modal-title {
+        margin-bottom: 5px;
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+
+    h2.modal-title {
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem !important;
+        width: 100%;
+    }
+
+    .modal-content {
+        border-radius: 20px !important;
+    }
+
+    .modal-body>img {
+        max-width: 100%;
+        max-height: 240px;
+        object-fit: contain;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
+
+    .modal-body>p {
+        font-size: 13px;
+    }
+
+
 
 }

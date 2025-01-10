@@ -43,6 +43,12 @@
         text-decoration: none;
     }
 
+    .contact-above a[href^="tel"] {
+        white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+        font-family: p;
+    }
+    
+
     .contact-above>*:last-child {
         margin-right: 10px;
     }
@@ -50,6 +56,7 @@
     .contact-above .icons {
         display: flex;
         gap: 0;
+        margin-left: 0;
     }
 
     .icons a {
@@ -59,6 +66,12 @@
     li.nav-item a.nav-link {
         font-family: 'krona-one-regular';
         font-size: 18px;
+    }
+
+    .navbar-brand img {
+        height: 80px;
+        margin-top: 20px;
+
     }
 
     .header-section h1 {
@@ -211,7 +224,7 @@
         margin: 0 25px;
         padding-top: 50px;
         padding-bottom: 30px;
-        width: 65%;
+        width: 83%;
     }
 
     .herramientas-section a {
@@ -232,6 +245,14 @@
         justify-self: center;
         /* max-width: 360px; */
         margin-bottom: 30px;
+    }
+
+    .tool-card-content {
+        text-align: -webkit-auto;
+    }
+
+    .tool-card-content > * {
+        text-align: left;
     }
 
     .herramientas-section .tool-card:first-of-type {

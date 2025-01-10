@@ -2,6 +2,7 @@
     --color-white: #ffffff;
     --color-black: #1a1a1a;
     --color-blue: #005BEB;
+    --color-blue-hover: #003EA8;
     --color-red: #E85F5C;
     --color-green: #00b11b;
     --color-gray-1: #eaeaea;
@@ -47,6 +48,10 @@
 
 body {
     margin: 0 5vw;
+}
+
+body a {
+    cursor: pointer;
 }
 
 
@@ -138,6 +143,12 @@ li.nav-item a.nav-link:hover {
     font-size: 20px;
 }
 
+button.contact-navbar-button:hover,
+a.contact-navbar-button:hover {
+    background-color: var(--color-blue-hover);
+    transition: background-color .3s ease;
+}
+
 li.nav-item:last-child {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -153,6 +164,7 @@ li.nav-item:last-child {
     background-color: var(--color-blue);
     font-size: 16px;
     font-family: 'krona-one-regular';
+    transition: background-color .3s ease;
 }
 
 
@@ -534,6 +546,11 @@ li.nav-item:last-child {
     font-size: 16px;
     font-family: 'krona-one-regular';
     cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.form-container.right form button:hover {
+    background-color: var(--color-blue-hover);
 }
 
 .input-container.input-name:after,

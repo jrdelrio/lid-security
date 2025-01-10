@@ -94,3 +94,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+// Seleccionar los elementos necesarios
+const aboutUsSection = document.getElementById("about-us-section");
+const button = aboutUsSection.querySelector(".contact-navbar-button");
+const paragraphs = aboutUsSection.querySelectorAll("p");
+
+// Función para mover el botón basado en el ancho de la ventana
+function adjustButtonPosition() {
+    if (window.innerWidth < 767) {
+        // Mover el botón debajo del último párrafo si aún no está ahí
+        const lastParagraph = paragraphs[paragraphs.length - 1];
+        if (lastParagraph.nextElementSibling !== button) {
+            lastParagraph.after(button);
+        }
+    } else {
+        // Restaurar el botón a su posición original si no está ahí
+        const contentWrapper = aboutUsSection.querySelector(".content-wrapper");
+        const titleButton = contentWrapper.querySelector(".title-button");
+        if (titleButton && titleButton.contains(button) === false) {
+            titleButton.appendChild(button);
+        }
+    }
+}
+
+// Ejecutar la función al cargar la página
+adjustButtonPosition();
+
+// Agregar un event listener para escuchar los cambios de tamaño de la ventana
+window.addEventListener("resize", adjustButtonPosition);
+
+
+
+// Seleccionar todos los enlaces del navbar que tienen href comenzando con "#"
+const navbarLinks = document.querySelectorAll('.navbar-footer a[href^="#"]');
+
+// Agregar un event listener a cada enlace
+navbarLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault(); // Prevenir la acción predeterminada (recargar página)
+        
+        // Obtener la sección destino usando el atributo href del enlace
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Hacer scroll suave hacia la sección
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    });
+});

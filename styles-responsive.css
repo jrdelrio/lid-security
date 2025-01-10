@@ -133,11 +133,12 @@
     .solutions-grid {
         justify-items: center;
         display: block;
+        text-align: -webkit-center;
     }
 
     /* solutions cards */
     .solution-card {
-        text-align: center;
+        text-align: -webkit-center;
         font-family: krona-one-regular;
         font-size: 14px;
         width: 75%;
@@ -167,8 +168,8 @@
     .central-img {
         display: block;
         width: 90%;
-        justify-self: center;
         text-align: left;
+        margin: auto;
     }
 
     .central-img img {
@@ -221,6 +222,7 @@
     .tools-grid {
         display: block;
         width: 100%;
+        text-align: -webkit-center;
     }
 
     .tool-card {
@@ -310,6 +312,12 @@
         display: block;
         justify-items: center;
         width: 70%;
+    }
+
+    .fortalezas-images {
+        text-align: -webkit-center;
+        margin: auto;
+        margin-bottom: 40px;
     }
 
     /* about us */

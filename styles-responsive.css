@@ -18,7 +18,7 @@
 
 /* responsive design */
 /* mobile */
-@media (width <= 767px) {
+@media (width <= 767px) {he
 
     html,
     body {
@@ -76,6 +76,8 @@
 
     .header-section h1 {
         font-size: 25px;
+        margin-top: 15px;
+        width: 90vw;
     }
 
     .header-section>h3 {
@@ -84,7 +86,7 @@
     }
 
     .header-section img.guards-image {
-        width: 90%;
+        width: 95% !important;
     }
 
     .goals-container {
@@ -103,6 +105,7 @@
         /* Espacio alrededor de la cuadrícula dentro del contenedor */
         box-sizing: border-box;
         /* Asegura que el padding se incluya dentro del tamaño total */
+        margin-top: -10px;
     }
 
     .goals-container .grid-container article {
@@ -467,6 +470,7 @@
         margin-bottom: 5px;
         font-size: .8rem;
         text-transform: uppercase;
+        text-align: left;
     }
 
     h2.modal-title {
@@ -474,6 +478,7 @@
         margin: 0;
         font-size: 1.2rem !important;
         width: 100%;
+        text-align: left;
     }
 
     .modal-content {
@@ -486,6 +491,10 @@
         object-fit: contain;
         margin: 0 auto 25px auto;
         display: block;
+    }
+    
+    .modal-body-text {
+        text-align: left;
     }
 
     .modal-body>p {

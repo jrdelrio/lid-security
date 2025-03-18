@@ -191,11 +191,12 @@ li.nav-item:last-child {
 
 .header-section div {
     text-align: center;
+    margin-top: 10px;
 }
 
 .header-section div img {
     width: 70%;
-    max-width: 500px;
+    max-width: 1100px;
     z-index: 10;
 }
 
@@ -203,7 +204,7 @@ li.nav-item:last-child {
     background-color: var(--color-black);
     z-index: 20;
     max-width: 1250px;
-    margin: auto;
+    margin: 60px auto;
     border-radius: 25px;
     position: relative;
 }
@@ -377,6 +378,7 @@ li.nav-item:last-child {
 .tool-card h5 {
     font-size: 10px;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .tool-card-content h4,
@@ -594,12 +596,12 @@ li.nav-item:last-child {
 
 .input-container.input-email:after,
 .input-container.input-email:focus-within:after {
-    content: "Correo electrónico*";
+    content: "Correo electrÃ³nico*";
 }
 
 .input-container.input-phone:after,
 .input-container.input-phone:focus-within:after {
-    content: "Teléfono*";
+    content: "TelÃ©fono*";
 }
 
 .input-container.input-company:after,
@@ -684,6 +686,33 @@ h2.modal-title {
     border-radius: 10px;
 }
 
+/* Bot¨®n de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    z-index: 1000; /* Siempre encima del contenido */
+    width: 60px; /* Tama0Š9o del bot¨®n */
+    height: 60px;
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Bot¨®n circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: pointer;
+}
+
+.whatsapp-button img {
+    width: 70%; /* Ajusta el tama0Š9o del ¨ªcono dentro del bot¨®n */
+    height: auto;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+    transition: transform 0.2s ease-in-out;
+}
+
 @media (width > 767px) {
 
     footer {
@@ -702,6 +731,11 @@ h2.modal-title {
         display: flex;
         justify-content: space-around;
         margin-bottom: 80px;
+    }
+
+
+    .navbar-footer {
+        align-content: center;
     }
 
     .navbar-footer ul {

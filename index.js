@@ -1,4 +1,3 @@
-
 // indentifico el tipo de device
 function isMobileDevice() {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -21,15 +20,14 @@ if (isMobileDevice()) {
     console.log("Ancho de ventana:", window.innerWidth);
 }
 
-
 // funcionalidad del formulario
 document.addEventListener("DOMContentLoaded", () => {
     // Inicializa EmailJS con tu user ID
-    const USER_ID = "-yxxv8md0PULJcOgX";
-    const SERVICE_ID = "service_qqo52pi";
-    const TEMPLATE_ID = "template_dti6y4e";
+    // const USER_ID = "-yxxv8md0PULJcOgX";
+    // const SERVICE_ID = "service_qqo52pi";
+    // const TEMPLATE_ID = "template_dti6y4e";
 
-    emailjs.init(USER_ID);
+    // emailjs.init(USER_ID);
 
     const form = document.querySelector("form");
     const button = form.querySelector("button[type='submit']");
@@ -49,9 +47,41 @@ document.addEventListener("DOMContentLoaded", () => {
         return valid;
     }
 
-    // Envío de datos a EmailJS
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+    // Envío de datos a la API
+    // form.addEventListener("submit", async (e) => {
+    //     e.preventDefault();
+
+    //     if (!validateForm()) {
+    //         alert("Por favor, completa todos los campos.");
+    //         return;
+    //     }
+
+    //     button.innerHTML = `
+    //     <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...`;
+    //     button.disabled = true;
+
+    //     const formData = {
+    //         from_name: form.name.value,
+    //         from_email: form.email.value,
+    //         from_phone: form.phone.value,
+    //         from_company: form.company.value,
+    //         from_message: form.message.value,
+    //     };
+
+    //     try {
+    //         await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData);
+    //         alert("¡Mensaje enviado exitosamente!");
+    //         form.reset();
+    //     } catch (error) {
+    //         console.error("Error al enviar mensaje:", error);
+    //         alert("Hubo un error al enviar tu mensaje. Intenta nuevamente.");
+    //     } finally {
+    //         button.textContent = "Enviar";
+    //         button.disabled = false;
+    //     }
+    // });
+    form.addEventListener("submit", async (ev) => {
+        ev.preventDefault();
 
         if (!validateForm()) {
             alert("Por favor, completa todos los campos.");
@@ -63,15 +93,33 @@ document.addEventListener("DOMContentLoaded", () => {
         button.disabled = true;
 
         const formData = {
-            from_name: form.name.value,
-            from_email: form.email.value,
-            from_phone: form.phone.value,
-            from_company: form.company.value,
-            from_message: form.message.value,
+            email: form.email.value,
+            name: form.name.value,
+            phone: form.phone.value,
+            company: form.company.value,
+            message: form.message.value,
         };
 
         try {
-            await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData);
+            const response = await fetch(
+                "http://localhost:3001/send-email-for-leed",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                }
+            );
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(
+                    result.error || "Error al enviar el formulario."
+                );
+            }
+
             alert("¡Mensaje enviado exitosamente!");
             form.reset();
         } catch (error) {
@@ -92,8 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
 
 // Seleccionar los elementos necesarios
 const aboutUsSection = document.getElementById("about-us-section");
@@ -124,25 +170,23 @@ adjustButtonPosition();
 // Agregar un event listener para escuchar los cambios de tamaño de la ventana
 window.addEventListener("resize", adjustButtonPosition);
 
-
-
 // Seleccionar todos los enlaces del navbar que tienen href comenzando con "#"
 const navbarLinks = document.querySelectorAll('.navbar-footer a[href^="#"]');
 
 // Agregar un event listener a cada enlace
-navbarLinks.forEach(link => {
-    link.addEventListener('click', event => {
+navbarLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
         event.preventDefault(); // Prevenir la acción predeterminada (recargar página)
-        
+
         // Obtener la sección destino usando el atributo href del enlace
-        const targetId = link.getAttribute('href');
+        const targetId = link.getAttribute("href");
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
             // Hacer scroll suave hacia la sección
             targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
+                behavior: "smooth",
+                block: "start",
             });
         }
     });

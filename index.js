@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const response = await fetch(
-                "http://localhost:3001/send-email-for-leed",
+                "https://contact-api.lids.cl/send-email-for-leed",
                 {
                     method: "POST",
                     headers: {
